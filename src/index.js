@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+const jsondata = "https://raw.githubusercontent.com/playoutprod/2020-3wa-react01/master/01_FORMULAIRES_LIFTINGUP/exercices/slider/data.json"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App url={jsondata}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
