@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Wrapper from './Wrapper'
 import Input from './Input'
-import Radio from './Radio'
 import Select from './Select'
 import Questions from './Questions'
 
@@ -17,11 +16,9 @@ export default class Form extends Component {
                     <form>
                         <div className="form-group">
                             <Wrapper className="header">
-                                <h1>{Questions}</h1>
-                                
-                                <Select>
-                                    
-                                </Select>
+                                <h1>{this.props.Questions}</h1>
+                                <Questions />
+                                <Select/>
                             </Wrapper>
                         </div>
                     </form> 

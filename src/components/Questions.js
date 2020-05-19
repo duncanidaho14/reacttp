@@ -1,8 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-const Questions = (props) => {
-    const questions = {
+const questions = {
         'symfony': {
             title: "Symfony design pattern",
             choices: ['MMV', 'MVC', 'MMVV'],
@@ -28,7 +25,9 @@ const Questions = (props) => {
             feedback: 'JSX est un sur ensemble à JS'
         }
     }
-    questions.map((question, k) => {
+const Questions = () => {
+    
+    { Object.values(questions).map((question, k) => {
         const Question = question.type
         return (
             <div className="question" key={k}>
@@ -36,10 +35,11 @@ const Questions = (props) => {
                 <p>
                     <Question response={1} value={question.choices} name={question.name} />
                     <Question response={2} value={question.choices} name={question.name} />
+                    <Question response={3} value={question.choices} name={question.name} />
                 </p>
             </div>
         )
-    })
+    })}
 };
 
 Questions.propTypes = {};
