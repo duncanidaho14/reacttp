@@ -28,16 +28,18 @@ const Questions = (props) => {
             feedback: 'JSX est un sur ensemble à JS'
         }
     }
-    return (
-        <div className="side">
-            <div className="side-left">
-                {props.left}
+    questions.map((question, k) => {
+        const Question = question.type
+        return (
+            <div className="question" key={k}>
+                <h2>{question.title}</h2>
+                <p>
+                    <Question response={1} value={question.choices} name={question.name} />
+                    <Question response={2} value={question.choices} name={question.name} />
+                </p>
             </div>
-            <div className="side-right">
-                {props.right}
-            </div>
-        </div>
-    );
+        )
+    })
 };
 
 Questions.propTypes = {};

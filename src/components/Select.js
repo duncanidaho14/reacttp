@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Radio from './Radio'
 
 export default class Select extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ export default class Select extends Component {
                     </div>
                     <select className="custom-select" id="inputGroupSelect01" />
                     {this.props.children}
+                    <Radio />
                 </div>
             </div>
         )

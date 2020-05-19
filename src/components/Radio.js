@@ -9,9 +9,9 @@ export default class Radio extends Component {
             <div>
                     <select className="custom-select" id="inputGroupSelect01">
                         <option>Choose...</option>
-                        <option value={this.props}>One</option>
-                        <option value={this.props}>Two</option>
-                        <option value={this.props}>Three</option>
+                        <option value={this.props.question}>{this.props.title}</option>
+                        <option value={this.props.question}>{this.props.question}</option>
+                        <option value={this.props.question}>{this.props.question}</option>
                     </select>
               
             </div>

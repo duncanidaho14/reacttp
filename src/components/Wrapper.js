@@ -6,7 +6,7 @@ export default class Wrapper extends Component {
     }
     render() {
         return (
-            <div className={this.props.color}>
+            <div className={"wrapper " + this.props.color} style={this.props.style}>
                 {this.props.children}
             </div>
         )
