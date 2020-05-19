@@ -13,10 +13,11 @@ export default class Form extends Component {
         return (
             <div>
                 <Wrapper className="app">
+                <hr />
                     <form>
                         <div className="form-group">
                             <Wrapper className="header">
-                                <h1>{this.props.Questions}</h1>
+                                {/* <h1>{this.props.Questions}</h1> */}
                                 <Questions />
                                 <Select/>
                             </Wrapper>

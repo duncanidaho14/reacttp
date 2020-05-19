@@ -14,7 +14,7 @@ export default class Select extends Component {
                     </div>
                     <select className="custom-select" id="inputGroupSelect01" />
                     {this.props.children}
-                    <Radio />
+                    <Radio value={this.props.question} />
                 </div>
             </div>
         )
