@@ -5,6 +5,8 @@ export default class Wrapper extends Component {
         super(props)
     }
     render() {
+        console.log('Wrapper' + this.props);
+        
         return (
             <div className={"wrapper " + this.props.color} style={this.props.style}>
                 {this.props.children}

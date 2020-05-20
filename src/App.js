@@ -7,11 +7,11 @@ import Slider from './components/Slider';
 import Counter from './components/Counter';
 import TaskApp from './components/TaskApp';
 import SuperbeApp from './components/SuperbeApp';
-import Form from './components/Form';
+import SuperAppForm from './components/tp/SuperAppForm';
 const jsondata = "https://raw.githubusercontent.com/playoutprod/2020-3wa-react01/master/01_FORMULAIRES_LIFTINGUP/exercices/slider/data.json"
 
 
-function App() {
+const App = (props) => {
 
   return (
     <div className="App">
@@ -21,9 +21,10 @@ function App() {
         <TaskApp />
 
         <SuperbeApp />
-
-        <Form />
-
+        <hr />
+        <hr />
+        <SuperAppForm questions={props.questions} title="QCM React" />
+        <hr/>
         <Horloge step={1} time={500} />
         <Horloge step={2} time={500} />
         <img src={logo} className="App-logo" alt="logo" />

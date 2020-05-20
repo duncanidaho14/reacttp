@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Questions = (props) => {
+    console.log('props question ' + props)
     const questions = {
         'symfony': {
             title: "Symfony design pattern",
@@ -26,27 +27,13 @@ const Questions = (props) => {
             name: "jsx",
             feedback: 'JSX est un sur ensemble à JS'
         }
-}
+    }
     return (
         <div>
-
-            {Object.values(questions).map((question, k) => {
-                const Question = question.type
-                return (
-                    <div className="question" key={k}>
-                        <h2>{question.title}</h2>
-                        <p>
-                            <Question response={1} value={question.choices} name={question.name} />
-                            <Question response={2} value={question.choices} name={question.name} />
-                            <Question response={3} value={question.choices} name={question.name} />
-                        </p>
-                    </div>
-                )
-            })}
+            
         </div>
-    )
+    );
 };
 
-Questions.propTypes = {};
 
 export default Questions;
